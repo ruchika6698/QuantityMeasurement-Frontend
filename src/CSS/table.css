@@ -1,0 +1,27 @@
+#History {
+  text-align: center;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  border: 3px solid #ddd;
+  width: 100%;
+  font-size:20px;
+}
+
+#History td, #Employee th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  font-size:16px;
+}
+
+#History tr:nth-child(even){background-color: #f2f2f2;}
+
+#History tr:hover {background-color: #ddd;}
+
+#History th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color:#ffe6e6;
+  color: black;
+  font-size:20px;
+}
