@@ -48,10 +48,10 @@ export class History extends React.Component {
     return (
       <TableContainer component={Paper}> 
       <h2 align="center">History </h2>
+      {/* <h2 align="right"><button type="button" onClick={()=>this.delete} className="btn btn-danger"> Delete </button> </h2> */}
         <Table stickyHeader aria-label="sticky table" id='History'>  
           <TableHead>  
             <TableRow>  
-              <TableCell>Id</TableCell>  
               <TableCell align="center" >Option Type</TableCell>  
               <TableCell align="center" >Value</TableCell>  
               <TableCell align="center" >Result</TableCell>  
@@ -64,15 +64,12 @@ export class History extends React.Component {
             {  
               this.state.History.map((d, index) => {  
                 return <TableRow key={index}>  
-                  <TableCell component="th" scope="row">  
-                    {d.id}  
-                  </TableCell>  
                   <TableCell align="center">{d.optionType}</TableCell>  
                   <TableCell align="center">{d.value}</TableCell>  
                   <TableCell align="center">{d.result}</TableCell>  
-                  <TableCell align="center">{d.dateOnCreation}</TableCell>    
+                  <TableCell align="center">{d.dateOnCreation}</TableCell>   
+                  <TableCell align="center"><button type="button" onClick={()=>this.delete(d.id)} className="btn btn-danger"> Delete </button></TableCell> 
                   <TableCell align="center"> <input type="checkbox" /> </TableCell>  
-                  <TableCell align="right"> <button type="button" onClick={()=>this.delete(d.id)} className="btn btn-danger"> Delete </button> </TableCell> 
                 </TableRow>  
               })  
             }  
