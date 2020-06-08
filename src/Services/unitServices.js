@@ -12,7 +12,7 @@ class Service {
     //API calling for delete data by ID
     delete(Id){
         console.log(" Id in axios service ",Id);
-    return   axios.delete('https://localhost:44313/api/measurement'+Id);
+    return   axios.delete('https://localhost:44313/api/measurement/'+Id);
     }
 }
 export default Service;
