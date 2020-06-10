@@ -2,7 +2,6 @@ import React from "react";
 
 export class Length extends React.Component {
     
-
 render() {
     return (
     <div>
@@ -31,5 +30,5 @@ render() {
       </div>
     </div>
     )
-}
+  }
 }
