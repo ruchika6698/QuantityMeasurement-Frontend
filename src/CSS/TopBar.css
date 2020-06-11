@@ -99,10 +99,10 @@
     background-color:#EDFDF9;
     color:#0EC098;
     text-align:bottom;
-    /* background-position:center;
+    background-position:center;
     background-image: url("C:/Users/boss/quantitymeasurement/src/Assets/scale.svg");
     background-repeat: no-repeat;
-    display: inline-block; */
+    display: inline-block;
 }
 .temperature:hover,.temperature:active{
    border-color:#FD5160;
@@ -179,6 +179,9 @@
     margin-top:30px;
     margin-bottom:25px;
 }
+.lengthimage:hover{
+    z-index:-1;
+}
 .tempimage{
     margin-top:30px;
     margin-bottom:18px;
@@ -200,13 +203,32 @@
     font-size: 12px;
     line-height: 15px;
 }
- /* @media only screen and (max-width: 1024px) {
-        .main,.topbar-container,.quanment,.history,.header-container,.header-text,.length,.home,.volume,.temperature,.header{
-            width:100%;
+ @media only screen and (max-width: 1024px) {
+        .quanment{
+            color:red;
         }
-} */
-@media all and (max-width: 699px) and (min-width: 520px), (min-width: 1151px) {
-  body {
-    background: #ccc;
-  }
+        .header-span{
+            Text-align:left;
+            display:flex;
+        }
+}
+
+@media only (min-width: 505px) {
+    .length{
+        display:flex;
+        flex-direction:column;
+        flex-shrink:2;
+        width: 400px;
+        height:137px;
+    }
+    .header-span{
+            Text-align:90px;
+            width: 40px;
+        }
+        .main{
+            width: 100%;
+        }
+        .home{
+            width: 50%;
+        }
 }

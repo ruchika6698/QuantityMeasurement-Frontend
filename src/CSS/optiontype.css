@@ -76,11 +76,11 @@
     left: 385px;
     width: 337px;
     height: 45px;
+    font-weight: bold;
     /* margin: 5px; */
     border: 1px solid #E7DCFE;
     border-radius: 3px;
     opacity: 1;
-    font-weight: bold;
     display:flex;
     flex-direction:column;
     align-items:center;
@@ -93,8 +93,26 @@
   overflow-y: hidden;;
   display: inline-block;
 }
+
  @media only screen and (max-width: 1024px) {
-        width: 30%;
-        min-height: 117px;
-        margin: 0 3.3% 0 3.33%;
-    }
+        .input,.input1,.select,.select1{
+            width: 230px;
+            margin-right: 20px;
+            padding: 10px;
+        }
+        .box{
+            width: 690px;
+            left: 60%;
+        }
+}
+@media only and screen (min-width: 505px) {
+    .input,.input1,.select,.select1{
+            width: 60px;
+            margin-right: 20px;
+            padding: 6px;
+        }
+    .box{
+            width: 350px;
+            left: 80%;
+        }
+}
