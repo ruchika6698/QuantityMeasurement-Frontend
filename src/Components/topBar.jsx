@@ -30,46 +30,40 @@ export class TopBar extends React.Component {
         };
     }
     handleColorToggle = () => {
-      console.log(" this is toggle",this.state.openImg);
       this.setState({ openImg: !this.state.openImg });
       console.log(this.state.openImg);
-}
-handleColorToggle1 = () => {
-      console.log(" this is toggle",this.state.openImg1);
+    }
+    handleColorToggle1 = () => {
       this.setState({ openImg1: !this.state.openImg1 });
       console.log(this.state.openImg1);
-}
-handleColorToggle2 = () => {
-      console.log(" this is toggle",this.state.openImg2);
+    }
+    handleColorToggle2 = () => {
       this.setState({ openImg2: !this.state.openImg2 });
       console.log(this.state.openImg2);
-}
+    }
     handleToggle=()=>{
-         this.setState({ imagetrue: !this.state.imagetrue });
-  }
-  handleToggle1=()=>{
-         this.setState({ imagetrue1: !this.state.imagetrue1 });
-  }
-  handleToggle2=()=>{
+      this.setState({ imagetrue: !this.state.imagetrue });
+    }
+    handleToggle1=()=>{
+      this.setState({ imagetrue1: !this.state.imagetrue1 });
+    }
+    handleToggle2=()=>{
          this.setState({ imagetrue2: !this.state.imagetrue2 });
-  }
+    }
     componentDidMount(){
       this.lengthOption();
     }
     lengthOption=()=>{
-      console.log("Length option click");
        this.setState({options:this.state.unit1});
       console.log(this.state.options);
 
     }
 
     temperatureOption=()=>{
-      console.log("Temperature option click",this.state);
       this.setState({options:this.state.unit2});
       console.log("temperature array",this.state.options);
     }
     volumeOption=()=>{
-      console.log("Volume option click",this.state);
       this.setState({options:this.state.unit3});
       console.log(this.state.options);
     }

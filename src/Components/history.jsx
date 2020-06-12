@@ -23,7 +23,6 @@ export class History extends React.Component {
    this.history();
  }
  history=() => {
-   console.log("history call");
     service.history().then((data)=>{
       console.log(" All historyfound ",data.data.data);
       this.setState({History:data.data.data});
@@ -40,7 +39,6 @@ export class History extends React.Component {
     service.delete(Id).then((json) => {  
       console.log("responce data==>",json);
     if(json.data.success==='True'){  
-    // toast.success("Records Deleted Sucessfully", { position: toast.POSITION.TOP_CENTER })  
       alert('Record deleted successfully!!');
     }  
     })  
@@ -50,7 +48,6 @@ export class History extends React.Component {
     return (
       <TableContainer component={Paper}> 
       <h2 align="center">History </h2>
-      {/* <h2 align="right"><button type="button" onClick={()=>this.delete} className="btn btn-danger"> Delete </button> </h2> */}
         <Table stickyHeader aria-label="sticky table" id='History'>  
           <TableHead>  
             <TableRow>  
@@ -71,7 +68,6 @@ export class History extends React.Component {
                   <TableCell align="center">{d.result}</TableCell>  
                   <TableCell align="center">{d.dateOnCreation}</TableCell>   
                   <TableCell align="center"><button type="button" onClick={()=>this.delete(d.id)} className="btn btn-danger"> Delete </button></TableCell> 
-                  {/* <TableCell align="center"> <input type="checkbox" /> </TableCell>   */}
                 </TableRow>  
               })  
             }  
