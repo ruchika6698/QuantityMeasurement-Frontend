@@ -1,4 +1,6 @@
 import React from "react";
+import { ToastContainer, toast } from 'react-toastify';   
+import 'react-toastify/dist/ReactToastify.css';     
 import Table from '@material-ui/core/Table';  
 import TableBody from '@material-ui/core/TableBody';  
 import TableCell from '@material-ui/core/TableCell';  
@@ -23,6 +25,7 @@ export class History extends React.Component {
    this.history();
  }
  history=() => {
+   console.log("history call");
     service.history().then((data)=>{
       console.log(" All historyfound ",data.data.data);
       this.setState({History:data.data.data});
@@ -39,7 +42,7 @@ export class History extends React.Component {
     service.delete(Id).then((json) => {  
       console.log("responce data==>",json);
     if(json.data.status==='Success'){  
-    alert('Record deleted successfully!!');  
+    toast.success("Records Deleted Sucessfully", { position: toast.POSITION.TOP_CENTER })  
     }  
     })  
   }  
@@ -69,7 +72,7 @@ export class History extends React.Component {
                   <TableCell align="center">{d.result}</TableCell>  
                   <TableCell align="center">{d.dateOnCreation}</TableCell>   
                   <TableCell align="center"><button type="button" onClick={()=>this.delete(d.id)} className="btn btn-danger"> Delete </button></TableCell> 
-                  <TableCell align="center"> <input type="checkbox" /> </TableCell>  
+                  {/* <TableCell align="center"> <input type="checkbox" /> </TableCell>   */}
                 </TableRow>  
               })  
             }  
