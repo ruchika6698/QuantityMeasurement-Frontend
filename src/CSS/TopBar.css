@@ -127,7 +127,7 @@
     border-radius: 7px;
     opacity: 1;
 }
-.image1:hover{
+.image1:hover,.image1:active{
     display:block;
     border-color:#0EC098;
     border-width:2px;
@@ -136,7 +136,7 @@
     color:#0EC098;
     text-align:bottom;
 }
-.image2:hover{
+.image2:hover,.image2:active{
     display:block;
     border-color:#FD5160;
     border-width:2px;
@@ -144,7 +144,7 @@
     background-color:#FFEEF0;
     color:#FD5160;
 }
-.image3:hover{
+.image3:hover,.image3:active{
     display:block;
     border-color:#7224FF;
     border-width:2px;
@@ -159,10 +159,6 @@
     background-color:#EDFDF9;
     color:#0EC098;
     text-align:bottom;
-    /* background-position:center;
-    background-image: url("C:/Users/boss/quantitymeasurement/src/Assets/scale.svg");
-    background-repeat: no-repeat;
-    display: inline-block; */
 }
 .temperature:hover,.temperature:active{
    border-color:#FD5160;
