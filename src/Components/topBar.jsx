@@ -8,7 +8,6 @@ import Inactivehot from "../Assets/Inactivehot.svg";
 import Inactivebeaker from "../Assets/Inactivebeaker.svg";
 import {OptionType} from '../Components/optionType'
 import {Link } from "react-router-dom";
-import { History} from '../Components/history'
 
 export class TopBar extends React.Component {
   constructor(props) {
@@ -79,43 +78,43 @@ render() {
       <div class="home"> 
       {
         this.state.openImg ? 
-        <div class="length"  
+        <div class="length"  onClick={()=>this.lengthOption()}
            onMouseOver={this.handleColorToggle}
                           onMouseLeave={this.handleColorToggle}
                
                 // onMouseLeave={this.handleToggle}
-                ><img src={scale} onClick={()=>this.lengthOption()} class="lengthimage" alt="Length"/>Length</div>:
-          <div class="image1"
+                ><img src={scale}  class="lengthimage" alt="Length"/>Length</div>:
+          <div class="image1" onClick={()=>this.lengthOption()}
            onMouseOver={this.handleColorToggle}
           // onMouseOver={this.handleToggle}
                 onMouseLeave={this.handleColorToggle}
-          ><img src={Inactivescale} onClick={()=>this.lengthOption()} class="lengthimage" alt="Length"/>Length</div>
+          ><img src={Inactivescale} class="lengthimage" alt="Length"/>Length</div>
       }
       {
         this.state.openImg ? 
-          <div class="temperature"
+          <div class="temperature" onClick={()=>this.temperatureOption()}
             onMouseOver={this.handleColorToggle}
                 onMouseLeave={this.handleColorToggle}
-              ><img src={hot} onClick={()=>this.temperatureOption()} class="tempimage" alt="Temperature"/>Temperature</div>:
-          <div class="image2"
+              ><img src={hot}  class="tempimage" alt="Temperature"/>Temperature</div>:
+          <div class="image2" onClick={()=>this.temperatureOption()}
            onMouseOver={this.handleColorToggle}
           // onMouseOver={this.handleToggle}
                 onMouseLeave={this.handleColorToggle}
-            ><img src={Inactivehot} onClick={()=>this.temperatureOption()} class="tempimage" alt="Temperature"/>Temperature</div>
+            ><img src={Inactivehot}  class="tempimage" alt="Temperature"/>Temperature</div>
       }  
       {
         this.state.openImg ? 
-        <div class="volume"  
+        <div class="volume"  onClick={()=>this.volumeOption()}
            onMouseOver={this.handleColorToggle}
                           onMouseLeave={this.handleColorToggle}
                
                 // onMouseLeave={this.handleToggle}
-                ><img src={beaker} onClick={()=>this.volumeOption()} class="volumeimage" alt="Volume"/>Volume</div>:
-          <div class="image3"
+                ><img src={beaker}  class="volumeimage" alt="Volume"/>Volume</div>:
+          <div class="image3" onClick={()=>this.volumeOption()}
            onMouseOver={this.handleColorToggle}
           // onMouseOver={this.handleToggle}
                 onMouseLeave={this.handleColorToggle}
-          ><img src={Inactivebeaker} onClick={()=>this.volumeOption()} class="volumeimage" alt="Volume"/>Volume</div>
+          ><img src={Inactivebeaker}  class="volumeimage" alt="Volume"/>Volume</div>
       }
           <OptionType Units={this.state.options}/>
           

@@ -1,6 +1,4 @@
-import React from "react";
-import { ToastContainer, toast } from 'react-toastify';   
-import 'react-toastify/dist/ReactToastify.css';     
+import React from "react";  
 import Table from '@material-ui/core/Table';  
 import TableBody from '@material-ui/core/TableBody';  
 import TableCell from '@material-ui/core/TableCell';  
@@ -41,8 +39,9 @@ export class History extends React.Component {
     console.log("Delete Id",Id);
     service.delete(Id).then((json) => {  
       console.log("responce data==>",json);
-    if(json.data.status==='Success'){  
-    toast.success("Records Deleted Sucessfully", { position: toast.POSITION.TOP_CENTER })  
+    if(json.data.success==='True'){  
+    // toast.success("Records Deleted Sucessfully", { position: toast.POSITION.TOP_CENTER })  
+      alert('Record deleted successfully!!');
     }  
     })  
   }  

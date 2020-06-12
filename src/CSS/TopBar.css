@@ -129,12 +129,28 @@
 }
 .image1:hover{
     display:block;
+    border-color:#0EC098;
+    border-width:2px;
+    border-style:solid;
+    background-color:#EDFDF9;
+    color:#0EC098;
+    text-align:bottom;
 }
 .image2:hover{
     display:block;
+    border-color:#FD5160;
+    border-width:2px;
+    border-style:solid;
+    background-color:#FFEEF0;
+    color:#FD5160;
 }
 .image3:hover{
     display:block;
+    border-color:#7224FF;
+    border-width:2px;
+    border-style:solid;
+    background-color:#E7DCFE;
+    color:#7224FF;
 }
 .length:hover,.length:active {
     border-color:#0EC098;
