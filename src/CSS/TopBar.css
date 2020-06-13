@@ -290,11 +290,8 @@
         }
 }
 
-@media only (min-width: 505px) {
-    .length{
-        display:flex;
-        flex-direction:column;
-        flex-shrink:2;
+@media screen and (device-width: 360px) {
+  .length{
         width: 400px;
         height:137px;
     }

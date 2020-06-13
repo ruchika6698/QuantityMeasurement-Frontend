@@ -67,12 +67,6 @@ export class TopBar extends React.Component {
       this.setState({options:this.state.unit3});
       console.log(this.state.options);
     }
-    closePopper() {
-        this.setState({
-            openImg: false
-        })
-        console.log(this.state.openImg);
-    }
 
 render() {
     return (
